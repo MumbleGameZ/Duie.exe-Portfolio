@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mumble Games — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#top" class="nav-logo-link">
+      <img src="Images/Mumble Games Logo.png" alt="Mumble Games Logo" class="nav-logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <header id="top" class="hero-section">
+      <div class="hero-content">
+        <h1 class="site-title">Duie.exe (Mumble Games)</h1>
+        <p class="tagline">He/Him<br>I make things that move, things you can play,<br>and the occasional app that does both.</p>
+      </div>
+      
+      <div class="hero-image-container">
+        <span class="badge floating-badge">Animator · Game Dev · Artist</span>
+        <img src="Images/Mumble Games Logo.png" alt="Mumble Games Logo" class="hero-img">
+      </div>
+    </header>
+
+    <section id="about">
+      <p class="section-label">About</p>
+      <p class="about-text">
+        I'm a self-driven creative who got tired of watching things and decided to start making them instead.
+        Animation, game dev, art — I don't really pick one. I just follow whatever idea is too loud to ignore.
+        Most of my work is chaotic on purpose.
+      </p>
+    </section>
+
+    <section id="links">
+      <p class="section-label">Find me</p>
+      <a href="https://mumble-gamez.carrd.co/" class="link-pill" target="_blank">All my links ↗</a>
+    </section>
+
+    <section id="projects">
+      <p class="section-label">Featured Projects</p>
+
+      <div class="projects-grid-3-col">
+        
+        <div class="project-card">
+          <div class="project-card-top">
+            <a href="https://dusty-and-duie.fandom.com/wiki/Dusty_%26_Duie" target="_blank" class="project-title">Dusty &amp; Duie ↗</a>
+            <span class="project-tag">Web series</span>
+          </div>
+          <p class="project-desc">
+            An animated comedy web series of micro-shorts — hyper, absurd, and nostalgic.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <a href="https://mumble-games.itch.io/the-slime-is-a-lie" target="_blank" class="project-title">The Slime is a Lie ↗</a>
+            <span class="project-tag">Browser</span>
+          </div>
+          <p class="project-desc">
+            Wake up as Slime_001 with fractured memories. Fight through corrupted landscapes.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <a href="https://mumble-games.itch.io/blub-and-the-paper-world" target="_blank" class="project-title">Blub and the Paper World ↗</a>
+            <span class="project-tag">Survival</span>
+          </div>
+          <p class="project-desc">
+            A small character navigating a fragile world completely crafted out of paper textures.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="section-label">Contact</p>
+      <p class="contact-note">Want to commission? Got a project, collab idea, or just want to say hi?</p>
+      <div class="contact-row">
+        <input type="email" id="email-input" placeholder="your@email.com">
+        <button type="button" onclick="handleSend()">Send</button>
+      </div>
+      <p class="contact-confirm" id="confirm-msg"></p>
+    </section>
+
+    <footer>
+      <span>Mumble Games · 2025</span>
+      <span class="footer-dot">·</span>
+      <a href="https://mumble-gamez.carrd.co/" target="_blank">Links</a>
+    </footer>
+
+  </div>
+
+  <script>
+    function handleSend() {
+      var input = document.getElementById('email-input');
+      var msg = document.getElementById('confirm-msg');
+      if (input.value && input.value.includes('@')) {
+        msg.textContent = 'Got it — I\'ll get back to you.';
+        msg.style.color = '#3a3a30';
+        input.value = '';
+      } else {
+        msg.textContent = 'Enter a valid email first.';
+        msg.style.color = '#9e4a2a';
+      }
+    }
+  </script>
+</body>
+</html>
